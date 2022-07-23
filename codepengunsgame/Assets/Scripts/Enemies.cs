@@ -24,7 +24,6 @@ public class Enemies : MonoBehaviour
     private float distFromPlayer;
     private Vector3 dir;
 
-
     private void FixedUpdate()
     {
 
@@ -82,5 +81,10 @@ public class Enemies : MonoBehaviour
             currentBulletDelay = bulletDelay;
             shotBullet = true;
         }
+    }
+
+    private void Death()
+    {
+        gameObject.SetActive(false);
     }
 }

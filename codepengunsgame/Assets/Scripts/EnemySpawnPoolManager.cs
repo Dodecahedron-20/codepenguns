@@ -32,16 +32,13 @@ public class EnemySpawnPoolManager : MonoBehaviour
 
     public GameObject GetPooledObject()
     {
-        //1
         for (int i = 0; i < enemies.Count; i++)
         {
-            //2
             if (!enemies[i].activeInHierarchy)
             {
                 return enemies[i];
             }
         }
-        //3   
         return null;
     }
 }
