@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField]
     private GameObject mainMenuPage;
-    private bool mainpage = true;
 
     [SerializeField]
     private GameObject quitPromptPage;
