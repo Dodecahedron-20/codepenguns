@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Shoot",
+                    "name": "Ability",
                     "type": "Button",
                     "id": "219e750b-791a-4a76-a546-daf89cbffa81",
                     "expectedControlType": "Button",
@@ -107,7 +107,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -127,7 +127,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Catch",
+                    "name": "Ability",
                     "type": "Button",
                     "id": "9bd7fb0c-4aab-4ab2-9c3a-f1baf920f4a5",
                     "expectedControlType": "Button",
@@ -199,7 +199,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Catch",
+                    "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -210,7 +210,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Catch",
+                    "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -221,7 +221,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Catch",
+                    "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
