@@ -195,8 +195,24 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+      propertyPath: enemyBullet
+      value: 
+      objectReference: {fileID: 5969802513818803927, guid: 21754d09ef039804684f839af2fa5dbb, type: 3}
+    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+      propertyPath: playerCatcher
+      value: 
+      objectReference: {fileID: 689679812}
+    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+      propertyPath: playerShooter
+      value: 
+      objectReference: {fileID: 3880250471982356022}
+    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
       propertyPath: distFromPlayer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+      propertyPath: targetCatcherPreference
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8637665808684220013, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
       propertyPath: m_Name
@@ -1029,7 +1045,7 @@ GameObject:
   - component: {fileID: 689679821}
   m_Layer: 0
   m_Name: Catcher
-  m_TagString: Untagged
+  m_TagString: Players
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,7 +1236,6 @@ MonoBehaviour:
   - {fileID: 905629288}
   - {fileID: 1465661601}
   - {fileID: 1230000819}
-  footstepDelay: 0
 --- !u!233 &689679819
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -3120,7 +3135,6 @@ MonoBehaviour:
   - {fileID: 968791559}
   - {fileID: 1688215465}
   - {fileID: 491122752}
-  footstepDelay: 0.3
 --- !u!95 &7584057604353731999
 Animator:
   serializedVersion: 4

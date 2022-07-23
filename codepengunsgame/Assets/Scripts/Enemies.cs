@@ -5,17 +5,12 @@ using UnityEngine;
 public class Enemies : MonoBehaviour
 {
     public GameObject enemyBullet;
-
     public GameObject playerCatcher;
     public GameObject playerShooter;
-
-    public float targetCatcherPreference;
-    
-
     public Rigidbody2D rb;
+    public float targetCatcherPreference;
     public float maxRange;
     public float minRange;
-
 
     private bool targettingCatcher = false;
 
@@ -43,16 +38,12 @@ public class Enemies : MonoBehaviour
         {
             distFromPlayer = Vector2.Distance(transform.position, playerShooter.transform.position);
             targettingCatcher = false;
-
         }
-
-
-
 
         if (distFromPlayer <= maxRange)
         {
 
-           
+            dir = (playerShooter.transform.position - transform.position).normalized;
 
             if (targettingCatcher == true)
             {
@@ -61,17 +52,15 @@ public class Enemies : MonoBehaviour
             else
             {
                 dir = (playerShooter.transform.position - transform.position).normalized;
-
             }
+            transform.right = dir;
 
-
-            Vector3 angle = new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
-            rb.rotation = angle.z;
             if (distFromPlayer >= minRange)
             {
-                rb.velocity = new Vector2(dir.x, dir.y) * moveSpeed;
+                rb.AddForce(transform.right * moveSpeed);
             }
             Shoot();
+
         }
 
         if (shotBullet == true)
@@ -89,14 +78,7 @@ public class Enemies : MonoBehaviour
     {
         if(currentBulletDelay <= 0f && shotBullet == false)
         {
-
-
-
-            Instantiate(enemyBullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
-           
-            
-            
-            
+            Instantiate(enemyBullet, gameObject.transform.position, gameObject.transform.rotation);
             currentBulletDelay = bulletDelay;
             shotBullet = true;
         }
