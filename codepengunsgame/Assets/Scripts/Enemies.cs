@@ -9,6 +9,7 @@ public class Enemies : MonoBehaviour
     public GameObject playerCatcher;
     public GameObject playerShooter;
 
+    public float targetCatcherPreference;
     
 
     public Rigidbody2D rb;
@@ -26,11 +27,13 @@ public class Enemies : MonoBehaviour
     public float moveSpeed;
 
     private float distFromPlayer;
+    private Vector3 dir;
+
 
     private void FixedUpdate()
     {
 
-        if ((Vector2.Distance(transform.position, playerShooter.transform.position))+0.5 >= Vector2.Distance(transform.position, playerCatcher.transform.position))
+        if ((Vector2.Distance(transform.position, playerShooter.transform.position)) + targetCatcherPreference >= Vector2.Distance(transform.position, playerCatcher.transform.position))
         {
             distFromPlayer = Vector2.Distance(transform.position, playerCatcher.transform.position);
             targettingCatcher = true;
@@ -49,7 +52,7 @@ public class Enemies : MonoBehaviour
         if (distFromPlayer <= maxRange)
         {
 
-            Vector3 dir;
+           
 
             if (targettingCatcher == true)
             {
@@ -86,8 +89,11 @@ public class Enemies : MonoBehaviour
     {
         if(currentBulletDelay <= 0f && shotBullet == false)
         {
-            Instantiate(enemyBullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
-            
+
+
+
+            GameObject bullet = Instantiate(enemyBullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
+           
             
             
             
