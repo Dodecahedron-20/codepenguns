@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3806342089137560727, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806342089137560727, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806342089137560727, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5084811776277170823, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -140,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5084811776277170823, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -3.59
       objectReference: {fileID: 0}
     - target: {fileID: 5084811776277170823, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -246,6 +258,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &175433733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175433728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d50b9d899a8d849865b5cedfb2e238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &324980806
 GameObject:
   m_ObjectHideFlags: 0
