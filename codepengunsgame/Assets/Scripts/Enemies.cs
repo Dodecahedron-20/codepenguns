@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    public GameObject bullet;
-    public GameObject player;
+    public GameObject enemyBullet;
+
+    public GameObject playerCatcher;
+    public GameObject playerShooter;
+
+    public float targetCatcherPreference;
+    
+
     public Rigidbody2D rb;
     public float maxRange;
     public float minRange;
+
+
+    private bool targettingCatcher = false;
 
     private float currentBulletDelay;
     private float bulletDelay = 0.5f;
@@ -18,14 +27,44 @@ public class Enemies : MonoBehaviour
     public float moveSpeed;
 
     private float distFromPlayer;
+    private Vector3 dir;
+
 
     private void FixedUpdate()
     {
-        distFromPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        if ((Vector2.Distance(transform.position, playerShooter.transform.position)) + targetCatcherPreference >= Vector2.Distance(transform.position, playerCatcher.transform.position))
+        {
+            distFromPlayer = Vector2.Distance(transform.position, playerCatcher.transform.position);
+            targettingCatcher = true;
+
+        }
+        else
+        {
+            distFromPlayer = Vector2.Distance(transform.position, playerShooter.transform.position);
+            targettingCatcher = false;
+
+        }
+
+
+
 
         if (distFromPlayer <= maxRange)
         {
-            Vector3 dir = (player.transform.position - transform.position).normalized;
+
+           
+
+            if (targettingCatcher == true)
+            {
+                dir = (playerCatcher.transform.position - transform.position).normalized;
+            }
+            else
+            {
+                dir = (playerShooter.transform.position - transform.position).normalized;
+
+            }
+
+
             Vector3 angle = new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
             rb.rotation = angle.z;
             if (distFromPlayer >= minRange)
@@ -50,7 +89,14 @@ public class Enemies : MonoBehaviour
     {
         if(currentBulletDelay <= 0f && shotBullet == false)
         {
-            Instantiate(bullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
+
+
+
+            GameObject bullet = Instantiate(enemyBullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
+           
+            
+            
+            
             currentBulletDelay = bulletDelay;
             shotBullet = true;
         }

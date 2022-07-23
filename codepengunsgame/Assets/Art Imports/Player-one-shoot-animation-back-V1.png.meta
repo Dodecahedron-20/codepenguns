@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c07c4ec2d62b5f34e836d5b0e965d05c
+guid: 3d2428f4d5bfab04dad5cdde74dd9cd9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_0
+      name: Player-one-shoot-animation-back-V1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfd076edf950c9c4e996451e8479b99d
-      internalID: -1356887058
+      spriteID: 2c05c84492f15254d87a96be39b71445
+      internalID: -1283016703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_1
+      name: Player-one-shoot-animation-back-V1_1
       rect:
         serializedVersion: 2
         x: 128
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7edf3fa68dbb85498cf6be0d6d4ac29
-      internalID: -826043356
+      spriteID: a146d72c98341e141a8881ca64e567c1
+      internalID: -1036744608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_2
+      name: Player-one-shoot-animation-back-V1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f3a3a33e7bb5e64b8d7bc8cabde5772
-      internalID: -1234309277
+      spriteID: 2b9c79aaa399d6c46a73b6d703834d33
+      internalID: 595291374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_3
+      name: Player-one-shoot-animation-back-V1_3
       rect:
         serializedVersion: 2
         x: 128
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a3cc7711a28d374c9e9e54c6460c206
-      internalID: -1643607629
+      spriteID: 61d6388bfac7dab40843ae5aca596355
+      internalID: 1863166197
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player-two-bucket-catch-animation-front-spritsheet-V1_3: -1643607629
-      Player-two-bucket-catch-animation-front-spritsheet-V1_0: -1356887058
-      Player-two-bucket-catch-animation-front-spritsheet-V1_2: -1234309277
-      Player-two-bucket-catch-animation-front-spritsheet-V1_1: -826043356
+      Player-one-shoot-animation-back-V1_0: -1283016703
+      Player-one-shoot-animation-back-V1_1: -1036744608
+      Player-one-shoot-animation-back-V1_3: 1863166197
+      Player-one-shoot-animation-back-V1_2: 595291374
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

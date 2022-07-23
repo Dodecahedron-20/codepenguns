@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c07c4ec2d62b5f34e836d5b0e965d05c
+guid: b421bb870a52cca46bb4673924e170cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_0
+      name: Player-one-shoot-animation-horz-V1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfd076edf950c9c4e996451e8479b99d
-      internalID: -1356887058
+      spriteID: e94758449a5a0144597b080dd34022b7
+      internalID: 2102099267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_1
+      name: Player-one-shoot-animation-horz-V1_1
       rect:
         serializedVersion: 2
         x: 128
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7edf3fa68dbb85498cf6be0d6d4ac29
-      internalID: -826043356
+      spriteID: 0e0ebdcb4dbb55945a3927277bcaccc5
+      internalID: 1281544378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_2
+      name: Player-one-shoot-animation-horz-V1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f3a3a33e7bb5e64b8d7bc8cabde5772
-      internalID: -1234309277
+      spriteID: 47df37fa3a2c51542b203ae96306c296
+      internalID: -294595549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player-two-bucket-catch-animation-front-spritsheet-V1_3
+      name: Player-one-shoot-animation-horz-V1_3
       rect:
         serializedVersion: 2
         x: 128
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a3cc7711a28d374c9e9e54c6460c206
-      internalID: -1643607629
+      spriteID: 3e99c02abb81039478171b7d4785333e
+      internalID: 960438907
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player-two-bucket-catch-animation-front-spritsheet-V1_3: -1643607629
-      Player-two-bucket-catch-animation-front-spritsheet-V1_0: -1356887058
-      Player-two-bucket-catch-animation-front-spritsheet-V1_2: -1234309277
-      Player-two-bucket-catch-animation-front-spritsheet-V1_1: -826043356
+      Player-one-shoot-animation-horz-V1_3: 960438907
+      Player-one-shoot-animation-horz-V1_2: -294595549
+      Player-one-shoot-animation-horz-V1_0: 2102099267
+      Player-one-shoot-animation-horz-V1_1: 1281544378
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
