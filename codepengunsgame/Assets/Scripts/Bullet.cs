@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Vector2 velocity;
-    public float speed;
 
+    float moveSpeed = 7f;
 
-    public float rotation;
+    Rigidbody2D rb;
 
-   
+    public Transform target;
+    Vector2 moveDirection;
 
+    // Use this for initialization
     void Start()
     {
-        transform.rotation = Quaternion.Euler(0, 0, rotation);
-
-        velocity = -gameObject.transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Players").transform;
+        moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
+        rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
+        Destroy(gameObject, 3f);
     }
 
-
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        
-      
-
-
-        transform.Translate(velocity * speed * Time.deltaTime);
+        if (col.gameObject.tag.Equals("Players"))
+        {
+            Debug.Log("Hit!");
+            Destroy(gameObject);
+        }
     }
+
 }
