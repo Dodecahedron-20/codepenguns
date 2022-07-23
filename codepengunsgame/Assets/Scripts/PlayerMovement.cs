@@ -5,9 +5,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public int playerNumber;
     public float moveSpeed;
     public Animator animator;
     public float abilityDelay = 0.5f;
+    public AudioSource abilitySFX;
+    public AudioSource[] footsteps;
     private Vector2 moveInput;
     private Vector2 lastInput;
     private Rigidbody2D rb;
@@ -17,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        StartCoroutine("Footstep");
     }
 
     // Update is called once per frame
@@ -49,9 +53,10 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnAbility(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && ability == false)
         {
             ability = true;
+            abilitySFX.Play();
             Invoke("StopAbility", abilityDelay);
         }
     }
@@ -59,5 +64,17 @@ public class PlayerMovement : MonoBehaviour
     private void StopAbility()
     {
         ability = false;
+    }
+
+    IEnumerator Footstep()
+    {
+        while (true)
+        {
+            if (moveInput != Vector2.zero)
+            {
+                footsteps[Random.Range(0, footsteps.Length - 1)].Play();
+            }
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 }
