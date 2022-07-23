@@ -92,7 +92,7 @@ public class Enemies : MonoBehaviour
 
 
 
-            GameObject bullet = Instantiate(enemyBullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            Instantiate(enemyBullet, this.gameObject.transform.position, this.gameObject.transform.rotation);
            
             
             
