@@ -150,9 +150,12 @@ public class EnemyController : MonoBehaviour
     {
         if (!ability)
         {
-            StartCoroutine(InstatiateBullet(angle));
-            ability = true;
-            Invoke("CancelAbility", abilityDelay);
+            if(gameObject.activeInHierarchy)
+            {
+                StartCoroutine(InstatiateBullet(angle));
+                ability = true;
+                Invoke("CancelAbility", abilityDelay);
+            }          
         }
     }
     private void FixedUpdate()

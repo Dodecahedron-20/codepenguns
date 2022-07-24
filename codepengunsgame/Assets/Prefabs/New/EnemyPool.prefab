@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
-  pooledEnemy: {fileID: 450807474610052763, guid: ae5f5df03b8f046478fa29868e4126ce, type: 3}
+  pooledEnemy:
+  - {fileID: 57434552459550466, guid: 9843c36cee7987842b7acc10ba3a7b85, type: 3}
+  - {fileID: 2169662365880663, guid: b462e7da29af0f544912d4ffe823134a, type: 3}
   enemiesToPool: 10

@@ -412,7 +412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2077921971
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -453,7 +453,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9150943, g: 0.53092736, b: 0.53092736, a: 1}
   m_FlipX: 0
@@ -592,21 +592,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPool
       objectReference: {fileID: 0}
-    - target: {fileID: 6039262276770073723, guid: 9551811facedf214eb8ae22c46e28028, type: 3}
-      propertyPath: pooledEnemy
-      value: 
-      objectReference: {fileID: 57434552459550466, guid: 9843c36cee7987842b7acc10ba3a7b85, type: 3}
-    - target: {fileID: 6039262276770073723, guid: 9551811facedf214eb8ae22c46e28028, type: 3}
-      propertyPath: pooledEnemy.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6039262276770073723, guid: 9551811facedf214eb8ae22c46e28028, type: 3}
-      propertyPath: pooledEnemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 57434552459550466, guid: 9843c36cee7987842b7acc10ba3a7b85, type: 3}
-    - target: {fileID: 6039262276770073723, guid: 9551811facedf214eb8ae22c46e28028, type: 3}
-      propertyPath: pooledEnemy.Array.data[1]
-      value: 
-      objectReference: {fileID: 2169662365880663, guid: b462e7da29af0f544912d4ffe823134a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9551811facedf214eb8ae22c46e28028, type: 3}
