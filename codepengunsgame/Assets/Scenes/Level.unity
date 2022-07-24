@@ -1329,7 +1329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2cd073ad5f401c46b531620c107b771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCatcher: {fileID: 1232019332}
+  playerGunner: {fileID: 1108011418}
   spawnDelay: 5
+  playerInRange: 0
 --- !u!1 &728783159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,18 +2540,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6642572588050894055, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
   m_PrefabInstance: {fileID: 1610865766}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1108011431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108011418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5039a26619ce7741b53ad2f5db42cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1194991275
 PrefabInstance:
   m_ObjectHideFlags: 0

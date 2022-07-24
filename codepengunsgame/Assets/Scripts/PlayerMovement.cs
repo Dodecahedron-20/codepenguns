@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("lasty", lastInput.y);
             animator.SetFloat("x", moveInput.x);
             animator.SetFloat("y", moveInput.y);
+
         }
 
         animator.SetBool("ability", ability);
@@ -60,8 +61,7 @@ public class PlayerMovement : MonoBehaviour
             ability = true;
             abilitySFX.Play();
             Invoke("StopAbility", abilityDelay);
-          
-            Instantiate(playerBullet, transform.position);
+            Instantiate(playerBullet, transform.position, Quaternion.AngleAxis((Mathf.Atan2(transform.position.y - mousePos.y, transform.position.x - mousePos.x) * Mathf.Rad2Deg) + 180, Vector3.forward));
         }
     }
     public void OnAim(InputAction.CallbackContext context)
