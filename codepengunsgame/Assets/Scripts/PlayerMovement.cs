@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("lasty", lastInput.y);
             animator.SetFloat("x", moveInput.x);
             animator.SetFloat("y", moveInput.y);
-
         }
 
         animator.SetBool("ability", ability);

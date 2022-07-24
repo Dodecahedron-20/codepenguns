@@ -31,12 +31,6 @@ public class EnemySpawnPoolManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public GameObject GetPooledObject()
     {
         for (int i = 0; i < enemies.Count; i++)
