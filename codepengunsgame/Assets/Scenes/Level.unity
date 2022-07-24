@@ -186,49 +186,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: rb
       value: 
       objectReference: {fileID: 175433732}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: range
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: player
       value: 
       objectReference: {fileID: 689679812}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: maxRange
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: minRange
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: enemyBullet
       value: 
       objectReference: {fileID: 5969802513818803927, guid: 21754d09ef039804684f839af2fa5dbb, type: 3}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: playerCatcher
       value: 
       objectReference: {fileID: 689679812}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: playerShooter
       value: 
       objectReference: {fileID: 3880250471982356022}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: distFromPlayer
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8375108351880662975, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
+    - target: {fileID: 0}
       propertyPath: targetCatcherPreference
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8637665808684220013, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
       propertyPath: m_Name
-      value: TestEnemy
+      value: Eyeball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9fe5eaeea112594ab071551333ce32b, type: 3}
@@ -250,7 +254,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -270,6 +274,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d50b9d899a8d849865b5cedfb2e238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catcher: {fileID: 689679812}
+  gunner: {fileID: 3880250471982356022}
+  bullet: {fileID: 5969802513818803927, guid: 21754d09ef039804684f839af2fa5dbb, type: 3}
+  gunnerDisadvantage: 1.5
+  targetOffset: 5
+  bulletDelay: 1
+  bulletAngleRandom: 10
+  moveForce: 10
+  maxRange: 15
+  minRange: 3
 --- !u!1 &324980806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,7 +1266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
-  moveSpeed: 30
+  moveSpeed: 40
   animator: {fileID: 689679820}
   abilityDelay: 0.5
   abilitySFX: {fileID: 689679821}
@@ -3151,7 +3165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
-  moveSpeed: 30
+  moveSpeed: 40
   animator: {fileID: 7584057604353731999}
   abilityDelay: 0.5
   abilitySFX: {fileID: 7584057604353732000}
