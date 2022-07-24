@@ -150,14 +150,27 @@ public class EnemyController : MonoBehaviour
     {
         if (!ability)
         {
-            StartCoroutine(InstatiateBullet(angle));
-            ability = true;
-            Invoke("CancelAbility", abilityDelay);
+            if(gameObject.activeInHierarchy)
+            {
+                StartCoroutine(InstatiateBullet(angle));
+                ability = true;
+                Invoke("CancelAbility", abilityDelay);
+            }          
         }
     }
     private void FixedUpdate()
     {
         Vector2 dir = targetPosition - (Vector2)transform.position;
         rb.AddForce(dir.normalized * moveForce);
+    }
+
+    //I added this: Jet, disables enemy if (player) bullet hits collider.
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.CompareTag("PlayerBullet"))
+        {
+            Debug.Log("I'm dead x_x");
+            gameObject.SetActive(false);
+        }
     }
 }

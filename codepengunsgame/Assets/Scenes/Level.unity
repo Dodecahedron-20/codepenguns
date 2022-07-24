@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: catcher
       value: 
       objectReference: {fileID: 689679812}
+    - target: {fileID: 4426098164446918937, guid: 9843c36cee7987842b7acc10ba3a7b85, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9843c36cee7987842b7acc10ba3a7b85, type: 3}
 --- !u!1 &919539255 stripped
@@ -1100,6 +1104,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 581213316273902543, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 581213316273902543, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 581213316273902543, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5240793951969118769}
+    - target: {fileID: 581213316273902543, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 581213316273902543, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAim
+      objectReference: {fileID: 0}
+    - target: {fileID: 581213316273902543, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 581213316273902543, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415326195034367917, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1150,3 +1182,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+--- !u!114 &5240793951969118769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2415326195034367918, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+  m_PrefabInstance: {fileID: 5240793951969118768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880250471982356022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8ba4de85c80b84a8957b9c23422437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

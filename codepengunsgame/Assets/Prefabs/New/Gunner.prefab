@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 2415326195034367888}
   m_Layer: 0
   m_Name: Gunner
-  m_TagString: Untagged
+  m_TagString: Players
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,6 +592,7 @@ MonoBehaviour:
   - {fileID: 5240793952128080951}
   - {fileID: 5240793953653134745}
   - {fileID: 5240793951654869616}
+  ability: 0
 --- !u!95 &2415326195034367919
 Animator:
   serializedVersion: 4
