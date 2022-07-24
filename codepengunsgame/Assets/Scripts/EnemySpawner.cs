@@ -19,18 +19,21 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float gunnerDistance = Vector2.Distance(transform.position, playerGunner.transform.position);
-        float catcherDistance = Vector2.Distance(transform.position, playerCatcher.transform.position);
+        if(playerCatcher && playerGunner != null)
+        {
+            float gunnerDistance = Vector2.Distance(transform.position, playerGunner.transform.position);
+            float catcherDistance = Vector2.Distance(transform.position, playerCatcher.transform.position);
 
-        if (gunnerDistance <= 3f || catcherDistance <= 3f)
-        {
-            Debug.Log("Player too close to spawner");
-            playerInRange = true;
-        }
-        else if (gunnerDistance >= 3f || catcherDistance <= 3f)
-        {
-            Debug.Log("Player away from spawner");
-            playerInRange = false;
+            if (gunnerDistance <= 3f || catcherDistance <= 3f)
+            {
+                Debug.Log("Player too close to spawner");
+                playerInRange = true;
+            }
+            else if (gunnerDistance >= 3f || catcherDistance <= 3f)
+            {
+                Debug.Log("Player away from spawner");
+                playerInRange = false;
+            }
         }
 
         if(currentSpawnDelay > 0)
