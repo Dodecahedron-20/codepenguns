@@ -8,15 +8,19 @@ public class EnemyController : MonoBehaviour
     public GameObject gunner;
     public GameObject bullet;
     public Animator animator;
+    public AudioSource hit;
+    public AudioSource shoot;
     public float gunnerDisadvantage;
 
     public float targetOffset;
 
     public float bulletDelay;
+    public float bulletCreationDelay;
     public float bulletAngleRandom;
     public float moveForce;
     public float maxRange;
     public float minRange;
+    public float abilityDelay;
 
     private Transform target;
     private Rigidbody2D rb;
@@ -25,6 +29,8 @@ public class EnemyController : MonoBehaviour
     private int targetType;
     private Vector2 targetPosition;
     private Vector2 targetVelocity;
+
+    private bool ability;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -108,8 +114,9 @@ public class EnemyController : MonoBehaviour
                 break;
         }
 
-        animator.SetFloat("x", rb.velocity.x);
-        animator.SetFloat("y", rb.velocity.y);
+        animator.SetFloat("lastx", rb.velocity.x);
+        animator.SetFloat("lasty", rb.velocity.y);
+        animator.SetBool("ability", ability);
     }
     private void TryToShoot()
     {
@@ -118,9 +125,25 @@ public class EnemyController : MonoBehaviour
             Shoot((Mathf.Atan2(transform.position.y - target.position.y, transform.position.x - target.position.x) * Mathf.Rad2Deg) + Random.Range(-bulletAngleRandom, bulletAngleRandom));
         }
     }
+
+    private void CancelAbility()
+    {
+        ability = false;
+    }
+    private IEnumerator InstatiateBullet(float angle)
+    {
+        yield return new WaitForSeconds(bulletCreationDelay);
+        Instantiate(bullet, transform.position, Quaternion.AngleAxis(angle + 180, Vector3.forward));
+        shoot.Play();
+    }
     private void Shoot(float angle)
     {
-        Instantiate(bullet, transform.position, Quaternion.AngleAxis(angle + 180, Vector3.forward));
+        if (!ability)
+        {
+            StartCoroutine(InstatiateBullet(angle));
+            ability = true;
+            Invoke("CancelAbility", abilityDelay);
+        }
     }
     private void FixedUpdate()
     {
