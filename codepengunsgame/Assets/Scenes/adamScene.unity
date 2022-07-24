@@ -3344,6 +3344,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2415326195034367918, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
+      propertyPath: playerBullet
+      value: 
+      objectReference: {fileID: 5969802513818803927, guid: cdce568217bc24d4b89c9b84dcea0354, type: 3}
     - target: {fileID: 9034890918778264582, guid: fab817fb4810c9d4fab4abd9fa19cfb3, type: 3}
       propertyPath: m_Name
       value: Gunner

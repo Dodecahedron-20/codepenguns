@@ -16,9 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [HideInInspector]
     public bool ability;
-    public 
-
     private Vector2 mousePos;
+    public GameObject playerBullet;
 
     // Start is called before the first frame update
     void Start()
@@ -62,12 +61,13 @@ public class PlayerMovement : MonoBehaviour
             ability = true;
             abilitySFX.Play();
             Invoke("StopAbility", abilityDelay);
-            Instantiate();
+            Instantiate(playerBullet, transform.position, Quaternion.AngleAxis((Mathf.Atan2(transform.position.y - mousePos.y, transform.position.x - mousePos.x) * Mathf.Rad2Deg) + 180, Vector3.forward));
         }
     }
     public void OnAim(InputAction.CallbackContext context)
     {
-
+        mousePos = context.action.ReadValue<Vector2>();
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
     }
     private void StopAbility()
     {

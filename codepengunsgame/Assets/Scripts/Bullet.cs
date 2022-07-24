@@ -9,7 +9,6 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        currentLifeSpan = setLifeSpan;
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(transform.right * moveSpeed);
         Destroy(gameObject, 10f);
