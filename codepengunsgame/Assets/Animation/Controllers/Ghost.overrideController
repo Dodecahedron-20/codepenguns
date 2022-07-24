@@ -6,14 +6,14 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Eyeball
+  m_Name: Ghost
   m_Controller: {fileID: 9100000, guid: dddb7f57ed6434c41885029db4432bbc, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: e4ef55497e6da6542bed50e623a43ced, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 7a1fa953f59880c4d844e2e298155781, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 65b72e83e8f39314fa3c49941aa6dd94, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 3e05d82cda57fa04fbb829abab199eb6, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 15be600dd873d8d45b9ac02eedf27415, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8ea2f6432d665fc4b9a6868c0569844d, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: acbb470ab16e45149984decc048f100d, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: e6fdd48e7bedb864c9af2f7b999a2153, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 27afdd6f49e55fd438d37e1cbe1c9822, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 21371f27d58cf6f4c8ba9d5f9e50335c, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 4406d09cbc34c9847a75fd07a0df1a37, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f0039ff2a9ea1dc4698e41117c897764, type: 2}

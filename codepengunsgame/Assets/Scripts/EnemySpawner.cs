@@ -47,9 +47,16 @@ public class EnemySpawner : MonoBehaviour
     {
         if (hasSpawned == false)
         {
-            Debug.Log("Enemy Spawned");
-            Instantiate(enemy, transform.position, transform.rotation);
-            hasSpawned = true;
+            enemy = EnemySpawnPoolManager.SharedInstance.GetPooledObject();
+
+            if (enemy != null)
+            {
+                Debug.Log("Enemy Spawned");
+                enemy.transform.position = this.transform.position;
+                enemy.transform.rotation = this.transform.rotation;
+                enemy.SetActive(true);
+                hasSpawned = true;
+            }         
         }
     }
 }
