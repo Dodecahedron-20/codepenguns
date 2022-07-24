@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 lastInput;
     private Rigidbody2D rb;
-    private bool ability;
+    [HideInInspector]
+    public bool ability;
 
     // Start is called before the first frame update
     void Start()

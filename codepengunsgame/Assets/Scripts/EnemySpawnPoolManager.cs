@@ -6,9 +6,10 @@ public class EnemySpawnPoolManager : MonoBehaviour
 {
     public static EnemySpawnPoolManager SharedInstance;
 
+    [HideInInspector]
     public List<GameObject> enemies;
 
-    public GameObject pooledEnemy;
+    public GameObject[] pooledEnemy;
 
     public int enemiesToPool;
 
@@ -23,7 +24,8 @@ public class EnemySpawnPoolManager : MonoBehaviour
         enemies = new List<GameObject>();
         for (int i = 0; i < enemiesToPool; i++)
         {
-            GameObject obj = (GameObject)Instantiate(pooledEnemy);
+            GameObject enemy = pooledEnemy[Random.Range(0, pooledEnemy.Length)];
+            GameObject obj = Instantiate(enemy);
             obj.SetActive(false);
             enemies.Add(obj);
         }
