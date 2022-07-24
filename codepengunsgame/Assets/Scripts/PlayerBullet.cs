@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     public float moveSpeed = 7f;
     private Rigidbody2D rb;
@@ -16,9 +16,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Players"))
+        if (col.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("PlayerHit!");
+            Debug.Log("EnemyHit!");
             Destroy(gameObject);
         }
     }
