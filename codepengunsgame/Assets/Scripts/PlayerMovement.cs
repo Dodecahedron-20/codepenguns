@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [HideInInspector]
     public bool ability;
+    public 
+
+    private Vector2 mousePos;
 
     // Start is called before the first frame update
     void Start()
@@ -59,9 +62,13 @@ public class PlayerMovement : MonoBehaviour
             ability = true;
             abilitySFX.Play();
             Invoke("StopAbility", abilityDelay);
+            Instantiate();
         }
     }
+    public void OnAim(InputAction.CallbackContext context)
+    {
 
+    }
     private void StopAbility()
     {
         ability = false;
