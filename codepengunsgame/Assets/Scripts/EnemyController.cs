@@ -31,6 +31,16 @@ public class EnemyController : MonoBehaviour
     private Vector2 targetVelocity;
 
     private bool ability;
+
+    private void Awake()
+    {
+        if(catcher == null && gunner == null)
+        {
+            catcher = GameObject.FindGameObjectWithTag("Catcher");
+            gunner = GameObject.FindGameObjectWithTag("Gunner");
+        }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
