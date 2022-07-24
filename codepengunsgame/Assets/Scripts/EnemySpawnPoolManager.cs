@@ -12,6 +12,11 @@ public class EnemySpawnPoolManager : MonoBehaviour
 
     public int enemiesToPool;
 
+    private void Awake()
+    {
+        SharedInstance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

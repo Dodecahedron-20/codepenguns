@@ -21,17 +21,21 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentSpawnDelay <= 0f)
+        if(currentSpawnDelay > 0)
         {
-            spawnDelay = currentSpawnDelay;
             currentSpawnDelay = Mathf.Clamp(currentSpawnDelay -= Time.deltaTime, 0f, spawnDelay);
-        }
+        }       
 
-        if(currentSpawnDelay <= 0f && playerInRange == false)
+        if (currentSpawnDelay <= 0f && hasSpawned == true)
+        {
+            hasSpawned = false;
+            currentSpawnDelay = spawnDelay;
+        }
+        else
+        if(currentSpawnDelay <= 0 && hasSpawned == false)
         {
             SpawnEnemy();
         }
-
 
         if(playerInRange == true)
         {
@@ -41,10 +45,10 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        if(hasSpawned == false)
+        if (hasSpawned == false)
         {
             Debug.Log("Enemy Spawned");
-            //Instantiate(enemy, transform.position, transform.rotation);
+            Instantiate(enemy, transform.position, transform.rotation);
             hasSpawned = true;
         }
     }
