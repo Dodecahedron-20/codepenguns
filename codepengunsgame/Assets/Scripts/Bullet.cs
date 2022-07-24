@@ -7,11 +7,25 @@ public class Bullet : MonoBehaviour
     public float moveSpeed = 7f;
     private Rigidbody2D rb;
 
+    public float setLifeSpan;
+    private float currentLifeSpan;
+
     void Start()
     {
+        currentLifeSpan = setLifeSpan;
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(transform.right * moveSpeed);
         Destroy(gameObject, 10f);
+    }
+
+    private void Update()
+    {
+        currentLifeSpan = Mathf.Clamp(currentLifeSpan -= Time.deltaTime, 0f, setLifeSpan);
+
+        if(currentLifeSpan <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
