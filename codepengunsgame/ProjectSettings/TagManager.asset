@@ -13,7 +13,7 @@ TagManager:
   - EnemySpawnPoint
   - Water
   - UI
-  - 
+  - FullHp
   - 
   - 
   - 
@@ -57,4 +57,7 @@ TagManager:
     locked: 0
   - name: Players
     uniqueID: 1182294443
+    locked: 0
+  - name: Title
+    uniqueID: 1681688529
     locked: 0

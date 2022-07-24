@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public int startHp;
+    private int startHp = 6;
     public int hp;
     public float bulletCooldown;
     float bulletTimer;
@@ -18,12 +18,24 @@ public class PlayerInteraction : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
+        
+        
         if (collision.CompareTag("Bullet") && bulletTimer <= 0)
         {
             hp -= 1;
             print(hp);
             bulletTimer = bulletCooldown;
         }
+
+        if (collision.CompareTag("Players") && hp <= 0)
+        {
+            hp = 1;
+            print(hp);
+            
+        }
+
+
     }
 }
 
