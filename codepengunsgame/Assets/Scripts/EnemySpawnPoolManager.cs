@@ -8,7 +8,7 @@ public class EnemySpawnPoolManager : MonoBehaviour
 
     public List<GameObject> enemies;
 
-    public GameObject enemy;
+    public GameObject pooledEnemy;
 
     public int enemiesToPool;
 
@@ -23,7 +23,7 @@ public class EnemySpawnPoolManager : MonoBehaviour
         enemies = new List<GameObject>();
         for (int i = 0; i < enemiesToPool; i++)
         {
-            GameObject obj = (GameObject)Instantiate(enemy);
+            GameObject obj = (GameObject)Instantiate(pooledEnemy);
             obj.SetActive(false);
             enemies.Add(obj);
         }
