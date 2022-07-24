@@ -24,6 +24,15 @@ public class Enemies : MonoBehaviour
     private float distFromPlayer;
     private Vector3 dir;
 
+    private void Awake()
+    {
+        if(playerCatcher == null && playerShooter == null)
+        {
+            playerCatcher = GameObject.FindGameObjectWithTag("Catcher");
+            playerShooter = GameObject.FindGameObjectWithTag("Gunner");
+        }
+    }
+
     private void FixedUpdate()
     {
 

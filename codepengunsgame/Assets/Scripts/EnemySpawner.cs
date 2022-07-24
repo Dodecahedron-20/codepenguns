@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemy;
+    private GameObject enemy;
 
-    public float currentSpawnDelay;
+    private float currentSpawnDelay;
     public float spawnDelay;
 
-    public bool playerInRange;
-    public bool hasSpawned;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private bool playerInRange;
+    private bool hasSpawned;
 
     // Update is called once per frame
     void Update()
@@ -47,9 +41,16 @@ public class EnemySpawner : MonoBehaviour
     {
         if (hasSpawned == false)
         {
-            Debug.Log("Enemy Spawned");
-            Instantiate(enemy, transform.position, transform.rotation);
-            hasSpawned = true;
+            enemy = EnemySpawnPoolManager.SharedInstance.GetPooledObject();
+
+            if (enemy != null)
+            {
+                Debug.Log("Enemy Spawned");
+                enemy.transform.position = transform.position;
+                enemy.transform.rotation = transform.rotation;
+                enemy.SetActive(true);
+                hasSpawned = true;
+            }         
         }
     }
 }
