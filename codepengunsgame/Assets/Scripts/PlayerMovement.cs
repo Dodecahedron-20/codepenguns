@@ -60,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
             ability = true;
             abilitySFX.Play();
             Invoke("StopAbility", abilityDelay);
-            Instantiate(playerBullet, transform.position, Quaternion.AngleAxis((Mathf.Atan2(transform.position.y - mousePos.y, transform.position.x - mousePos.x) * Mathf.Rad2Deg) + 180, Vector3.forward));
+          
+            Instantiate(playerBullet, transform.position);
         }
     }
     public void OnAim(InputAction.CallbackContext context)
