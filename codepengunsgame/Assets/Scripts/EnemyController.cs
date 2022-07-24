@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     public GameObject catcher;
     public GameObject gunner;
     public GameObject bullet;
+    public Animator animator;
     public float gunnerDisadvantage;
 
     public float targetOffset;
@@ -106,6 +107,9 @@ public class EnemyController : MonoBehaviour
                 targetPosition = target.position;
                 break;
         }
+
+        animator.SetFloat("x", rb.velocity.x);
+        animator.SetFloat("y", rb.velocity.y);
     }
     private void TryToShoot()
     {

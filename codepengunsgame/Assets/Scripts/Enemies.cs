@@ -59,7 +59,6 @@ public class Enemies : MonoBehaviour
                 rb.AddForce(transform.right * moveSpeed);
             }
             Shoot();
-
         }
 
         if (shotBullet == true)
