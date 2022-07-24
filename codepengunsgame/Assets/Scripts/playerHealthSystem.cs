@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerHealthSystem : MonoBehaviour
 {
-
+    private int touchers = 0;
     private GameObject Heart1;
     private GameObject Heart2;
     private GameObject Heart3;
@@ -52,20 +52,26 @@ public class playerHealthSystem : MonoBehaviour
         gameOver.SetActive(false);
 
     }
-
+    private void FixedUpdate()
+    {
+        touchers = 0;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        touchers++;
+        if (touchers >= 2)
+        {
+            touchers = 1;
+            return;
+        }
         Vector2 respawner = new Vector3(0, 0, 0);
-
-
-        if (collision.CompareTag("Bullet") )
+        if (collision.CompareTag("EnemyBullet") )
         {
             hitCounter += 1;
 
             hitSound.GetComponent<AudioSource>().Play();
-
-
+          
         }
         
         switch(hitCounter) {
@@ -120,7 +126,7 @@ public class playerHealthSystem : MonoBehaviour
             Destroy(Player2);
             Destroy(Chain);
 
-            Time.timeScale = 0;
+         
         }
     }
 }
