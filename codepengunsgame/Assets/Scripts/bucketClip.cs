@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class bucketClip : MonoBehaviour
 {
-
+    [SerializeField]
     private GameObject Clip0;
+    [SerializeField]
     private GameObject Clip1;
+    [SerializeField]
     private GameObject Clip2;
+    [SerializeField]
     private GameObject Clip3;
+    [SerializeField]
     private GameObject Clip4;
+    [SerializeField]
     private GameObject Clip5;
+    [SerializeField]
     private GameObject Clip6;
+    [SerializeField]
     private GameObject Clip7;
+    [SerializeField]
     private GameObject Clip8;
+    [SerializeField]
     private GameObject Clip9;
+    [SerializeField]
     private GameObject Clip10;
+    [SerializeField]
     private GameObject Clip11;
 
     public GameObject CollectSound;
@@ -36,18 +47,18 @@ public class bucketClip : MonoBehaviour
 
     private void Awake()
     {
-        Clip0 = GameObject.Find("Clip0");
-        Clip1 = GameObject.Find("Clip1");
-        Clip2 = GameObject.Find("Clip2");
-        Clip3 = GameObject.Find("Clip3");
-        Clip4 = GameObject.Find("Clip4");
-        Clip5 = GameObject.Find("Clip5");
-        Clip6 = GameObject.Find("Clip6");
-        Clip7 = GameObject.Find("Clip7");
-        Clip8 = GameObject.Find("Clip8");
-        Clip9 = GameObject.Find("Clip9");
-        Clip10 = GameObject.Find("Clip10");
-        Clip11 = GameObject.Find("Clip11");
+        //Clip0 = GameObject.Find("Clip0");
+        //Clip1 = GameObject.Find("Clip1");
+        //Clip2 = GameObject.Find("Clip2");
+        //Clip3 = GameObject.Find("Clip3");
+        //Clip4 = GameObject.Find("Clip4");
+        //Clip5 = GameObject.Find("Clip5");
+        //Clip6 = GameObject.Find("Clip6");
+        //Clip7 = GameObject.Find("Clip7");
+        //Clip8 = GameObject.Find("Clip8");
+        //Clip9 = GameObject.Find("Clip9");
+        //Clip10 = GameObject.Find("Clip10");
+        //Clip11 = GameObject.Find("Clip11");
 
         Clip0.SetActive(true);
         Clip1.SetActive(false);
