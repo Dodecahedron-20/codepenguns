@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 mousePos;
     public GameObject playerBullet;
 
+    private int bulletNumber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +63,14 @@ public class PlayerMovement : MonoBehaviour
             ability = true;
             abilitySFX.Play();
             Invoke("StopAbility", abilityDelay);
-            Instantiate(playerBullet, transform.position, Quaternion.AngleAxis((Mathf.Atan2(transform.position.y - mousePos.y, transform.position.x - mousePos.x) * Mathf.Rad2Deg) + 180, Vector3.forward));
+            bulletNumber = BulletSystems.Instance.currentBullets;
+            if (bulletNumber > 0)
+            {
+                Instantiate(playerBullet, transform.position, Quaternion.AngleAxis((Mathf.Atan2(transform.position.y - mousePos.y, transform.position.x - mousePos.x) * Mathf.Rad2Deg) + 180, Vector3.forward));
+                bulletNumber -= 1;
+                BulletSystems.Instance.currentBullets = bulletNumber;
+                BulletSystems.Instance.shoot = true;
+            }
         }
     }
     public void OnAim(InputAction.CallbackContext context)

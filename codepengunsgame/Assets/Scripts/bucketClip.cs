@@ -4,31 +4,6 @@ using UnityEngine;
 
 public class bucketClip : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject Clip0;
-    [SerializeField]
-    private GameObject Clip1;
-    [SerializeField]
-    private GameObject Clip2;
-    [SerializeField]
-    private GameObject Clip3;
-    [SerializeField]
-    private GameObject Clip4;
-    [SerializeField]
-    private GameObject Clip5;
-    [SerializeField]
-    private GameObject Clip6;
-    [SerializeField]
-    private GameObject Clip7;
-    [SerializeField]
-    private GameObject Clip8;
-    [SerializeField]
-    private GameObject Clip9;
-    [SerializeField]
-    private GameObject Clip10;
-    [SerializeField]
-    private GameObject Clip11;
-
     public GameObject CollectSound;
     public GameObject MissSound;
 
@@ -45,46 +20,23 @@ public class bucketClip : MonoBehaviour
 
     public static int clipSize;
 
+    private int caughtBullets = 0;
+
+
+
     private void Awake()
     {
-        //Clip0 = GameObject.Find("Clip0");
-        //Clip1 = GameObject.Find("Clip1");
-        //Clip2 = GameObject.Find("Clip2");
-        //Clip3 = GameObject.Find("Clip3");
-        //Clip4 = GameObject.Find("Clip4");
-        //Clip5 = GameObject.Find("Clip5");
-        //Clip6 = GameObject.Find("Clip6");
-        //Clip7 = GameObject.Find("Clip7");
-        //Clip8 = GameObject.Find("Clip8");
-        //Clip9 = GameObject.Find("Clip9");
-        //Clip10 = GameObject.Find("Clip10");
-        //Clip11 = GameObject.Find("Clip11");
-
-        Clip0.SetActive(true);
-        Clip1.SetActive(false);
-        Clip2.SetActive(false);
-        Clip3.SetActive(false);
-        Clip4.SetActive(false);
-        Clip5.SetActive(false);
-        Clip6.SetActive(false);
-        Clip7.SetActive(false);
-        Clip8.SetActive(false);
-        Clip9.SetActive(false);
-        Clip10.SetActive(false);
-        Clip11.SetActive(false);
 
         Player1 = GameObject.Find("Gunner");
         Player2 = GameObject.Find("Catcher");
 
         Chain = GameObject.Find("Chain");
 
-
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
 
         /* if (collision.CompareTag("EnemyBullet"))
          {
@@ -101,11 +53,10 @@ public class bucketClip : MonoBehaviour
             {
                 Destroy(collision.gameObject);
 
-                if (clipSize < 11)
-                {
-                    clipSize += 1;
-                }
-
+                clipSize += 1;
+                caughtBullets += 1;
+                BulletSystems.Instance.currentBullets = caughtBullets;
+                BulletSystems.Instance.shoot = true;
                 CollectSound.GetComponent<AudioSource>().Play();
 
             }
@@ -113,67 +64,8 @@ public class bucketClip : MonoBehaviour
             {
                 MissSound.GetComponent<AudioSource>().Play();
             }
-        }
-
-
-        switch (clipSize)
-        {
-
-            case 1:
-                Clip0.SetActive(false);
-                Clip1.SetActive(true);
-                break;
-
-            case 2:
-                Clip1.SetActive(false);
-                Clip2.SetActive(true);
-                break;
-
-            case 3:
-                Clip2.SetActive(false);
-                Clip3.SetActive(true);
-                break;
-            case 4:
-                Clip3.SetActive(false);
-                Clip4.SetActive(true);
-                break;
-
-
-            case 5:
-                Clip4.SetActive(false);
-                Clip5.SetActive(true);
-                break;
-
-            case 6:
-                Clip5.SetActive(false);
-                Clip6.SetActive(true);
-                break;
-
-            case 7:
-                Clip6.SetActive(false);
-                Clip7.SetActive(true);
-                break;
-
-            case 8:
-                Clip7.SetActive(false);
-                Clip8.SetActive(true);
-                break;
-
-            case 9:
-                Clip8.SetActive(false);
-                Clip9.SetActive(true);
-                break;
-            case 10:
-                Clip9.SetActive(false);
-                Clip10.SetActive(true);
-                break;
-            case 11:
-                Clip10.SetActive(false);
-                Clip11.SetActive(true);
-                break;
 
         }
-
 
     }
 }
