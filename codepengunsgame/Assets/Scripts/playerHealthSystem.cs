@@ -23,8 +23,8 @@ public class playerHealthSystem : MonoBehaviour
 
     public GameObject hitSound;
 
-
-    public GameObject gameOver;
+    [SerializeField]
+    private GameObject gameOver;
 
     public static int hitCounter;
 
@@ -47,6 +47,8 @@ public class playerHealthSystem : MonoBehaviour
 
         Chain = GameObject.Find("Chain");
 
+        Time.timeScale = 1;
+        hitCounter = 0;
 
         //gameOver = GameObject.Find("gameOver");
         gameOver.SetActive(false);
@@ -118,9 +120,10 @@ public class playerHealthSystem : MonoBehaviour
 
         if (hitCounter == 10)
         {
-
             gameOver.SetActive(true);
             gameOver.GetComponent<AudioSource>().Play();
+
+            Time.timeScale = 0;
 
             Destroy(Player1);
             Destroy(Player2);
@@ -128,5 +131,6 @@ public class playerHealthSystem : MonoBehaviour
 
          
         }
+
     }
 }
